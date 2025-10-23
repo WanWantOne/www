@@ -1,0 +1,105 @@
+body {
+     background-image: url(ChatGPT\ Image\ 5\ Okt\ 2025\,\ 00.09.29.png);
+    width: 100%;
+    height: 100%;
+}
+.container {
+    width: 960px;
+    background-color: white;
+    margin: auto;
+    border-radius: 10px;
+    color: #2F2F2F;
+    box-sizing: border-box;
+}
+.header {
+    background-color: #8B5E3C;
+    padding: 30px;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+.header h2 {
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+}
+.header ul li {
+    display: inline;
+    margin: 8px;
+}
+.header a {
+    text-decoration: none;
+    color: #2F2F2F;
+    font-size: 20px;
+}
+.header a:hover {
+    color: black;
+    background-color: grey;
+}
+/* Menghilangkan efek float */
+.cf::before,
+.cf::after {
+    content: "";
+    display: table;
+}
+.cf::after {
+    clear: both;
+}
+.cf{
+    zoom: 1;
+}
+/* ------------------------ */
+.footer {
+    background-color: #8B5E3C;
+    text-align: center;
+    padding: 10px;
+    clear: both;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+.footer .copy {
+    font-size: 15px;
+    color: #2F2F2F;
+    text-align: center;
+}
+
+/* -------------------Profil----------------- */
+
+#container {
+            background-color: aliceblue;
+            width: 500px;
+            margin: 30px auto;
+            padding: 20px;
+            border: 2px solid black;
+            border-radius: 10px;
+            box-shadow: 5px 5px 5px grey;
+        }
+        h1 {
+            color: cadetblue;
+            font-family: arial;
+            font-size: 20px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .foto {
+            display: block;
+            margin: 0 auto 20px auto;
+            width: 150px;
+            height: 150px;
+            border: 2px solid black;
+            border-radius: 50px;
+        }
+        .deskripsi {
+             color: darkolivegreen;
+             font-family: 'Times New Roman';
+             text-align: justify;
+             margin-bottom: 20px;
+        }
+        .hobi {
+            font-family: verdana;
+            font-size: 14px;
+            color: darkseagreen;
+            list-style-type: square;
+        }
+        .hobi li {
+            margin-bottom: 5px;
+        }

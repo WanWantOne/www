@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="id"></html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Saya</title>
+    <style>
+        .container {
+            display: grid;
+            grid-template-rows: 100px 50px 1fr 70px;
+            height: 100vh;
+        }
+
+        .header {
+            display: flex;
+            background-color: lightblue;
+            text-align: center;
+            font-weight: bold;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+        }
+
+        .navbar {
+            background-color: #222;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            padding: 0 10px;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px 12px;
+            display: inline-block;
+        }
+        .main {
+            display: grid;
+            grid-template-columns: 250px 1fr;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .sidebar {
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+        .sidebar ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+
+        .content {
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+        .content img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            display: block;
+            margin-bottom: 12px;
+        }
+
+        .footer {
+            background-color: #222;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">Profil Web Saya</div>
+
+        <div class="navbar">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </div>
+
+        <div class="main">
+            <aside class="sidebar">
+                <h3>Sidebar</h3>
+                <ul>
+                    <li>Hobi</li>
+                    <li>Pendidikan</li>
+                    <li>Cita-cita</li>
+                </ul>
+            </aside>
+
+            <main class="content">
+                <h2>Tentang Saya</h2>
+                <img src="WIN_20250909_08_23_23_Pro.jpg" alt="Foto Profil">
+                <p>Halo, nama saya Muhammad Najwan Wibisana. Saya suka belajar pemrograman web.</p>
+            </main>
+        </div>
+
+        <div class="footer">
+             &copy; 2025 Muhammad Najwan Wibisana
+        </div>
+    </div>
+</body>
+</html>

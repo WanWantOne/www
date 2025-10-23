@@ -1,0 +1,39 @@
+
+#container {
+            background-color: aliceblue;
+            width: 500px;
+            margin: 30px auto;
+            padding: 20px;
+            border: 2px solid black;
+            border-radius: 10px;
+        }
+        h1 {
+            color: cadetblue;
+            font-family: arial;
+            font-size: 20px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .foto {
+            display: block;
+            margin: 0 auto 20px auto;
+            width: 150px;
+            height: 150px;
+            border: 2px solid black;
+            border-radius: 50px;
+        }
+        .deskripsi {
+             color: darkolivegreen;
+             font-family: 'Times New Roman';
+             text-align: justify;
+             margin-bottom: 20px;
+        }
+        .hobi {
+            font-family: verdana;
+            font-size: 14px;
+            color: darkseagreen;
+            list-style-type: square;
+        }
+        .hobi li {
+            margin-bottom: 5px;
+        }

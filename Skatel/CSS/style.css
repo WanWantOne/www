@@ -1,0 +1,82 @@
+body {
+    background-color: bisque;
+    color: black;
+}
+
+.container {
+    width: 960px;
+    background-color: white;
+    margin: auto;
+   
+}
+
+.header {
+    padding: 10px;
+}
+
+.header .judul {
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.header ul li {
+    display: inline;
+    margin-right: 7px;
+}
+
+.header a {
+    text-decoration: none;
+    color: salmon;
+    font-size: 30px;
+}
+
+.header a:hover {
+    background-color: grey;
+    color: black;
+}
+
+.main {
+    padding: 20px;
+    width: 600px;
+    box-sizing: border-box;
+    float: left;
+}
+
+.sidebar {
+    padding: 30px;
+    width: 300px;
+    float: right;
+}
+
+/* Menghilangkan efek float agar content masuk dalam container */
+.cf::before,
+.cf::after {
+    content: "";
+    display: table;
+}
+
+.cf::after {
+    clear: both;
+}
+
+.cf{
+    *zoom: 1;
+}
+/* --------------------Penutup clear float--------------------- */
+
+.footer {
+    background-color: grey;
+    padding: 3px;
+}
+
+.footer .copy {
+    text-align: center;
+    font-size: 17px;
+    color: white;
+}
+
+.sidebar a{
+    text-decoration: none;
+    color: salmon;
+}

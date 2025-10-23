@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent-box {
+            position: relative;
+            width: 250x;
+            height: 150px;
+            background-color: #eaeaea;
+            margin: 20px;
+            padding: 10px;
+        }
+        .badge {
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            background-color: crimson;
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 12px;
+            font-size: 12px;
+        }
+        .fixed-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: steelblue;
+            color: #fff;
+            text-align: center;
+            padding: 15px;
+            font-weight: bold;
+            z-index: 1000;
+        }
+        .content {
+            margin-top: 70px; 
+            padding: 20px;
+        }
+        .layout {
+            display: flex;
+            gap: 20px;
+        }
+        .sidebar {
+            flex: 1;
+            height: 300px;
+            background-color: #f4f4f4;
+            padding: 15px;
+            position: -webkit-sticky;
+            position: sticky;
+            top: 10px;
+            border: 1px solid #ccc;
+        }
+        .main-content {
+            flex: 3;
+            padding: 15px;
+            border: 1px solid #ddd;
+        }
+        .long-text {
+            height: 1500px;
+            background: linear-gradient(#fafafa, #ddd);
+        }
+    </style>
+</head>
+<body>
+    <h2>1. Badge Absolute</h2>
+    <div class="parent-box">
+        <div class="badge">NEW</div>
+        <p>Ini adalah kotak dengan badge absolute di pojok kanan atas.</p>
+    </div>
+    <!-- 2.Fixed-header -->
+    <div class="fixed-header">Ini Header Fixed</div>
+    <div class="content">
+    <h2>2. Fixed Header</h2>
+    <p>Scroll halaman ini untuk melihat header tetap menempel di atas.</p>
+    <p class="long-text">Konten panjang...</p>
+    </div>
+
+    <!-- 3. Sidebar-sticky -->
+    <h2>3. sidebar sticky</h2>
+    <div class="layout">
+        <div class="sidebar">
+            <h3>Sidebar</h3>
+            <p>Sidebar ini sticky. Coba scroll halaman, sidebar tetap menempel.</p>
+        </div>
+        <div class="main-content">
+            <p>Ini area konten utaman.</p>
+            <div class="long-text"></div>
+        </div>
+    </div>
+</body>
+</html>
