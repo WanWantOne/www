@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Profil Saya</title>
+    <style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body, html {
+    margin: 0;
+    padding: 0;
+    background-color: #f3f7f9;
+    color: #333;
+}
+
+.container {
+    display: grid;
+    grid-template-rows: 70px 50px 1fr 60px;
+    height: 100vh;
+}
+
+/* Header with bright blue bg */
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #007acc;
+    color: white;
+    font-weight: 600;
+    font-size: 24px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Navbar with black bg */
+.navbar {
+    background-color: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    padding: 0 20px;
+    position: relative;
+}
+
+.navbar a {
+    color: #f1f1f1;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 10px 8px;
+    border-radius: 6px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-size: 16px;
+}
+.navbar a:hover {
+    background-color: #00caff;
+    color: white;
+    text-decoration: none;
+}
+
+/* Style search input in navbar */
+.navbar input[type="text"] {
+    margin-left: 30px;
+    padding: 6px 12px;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    width: 170px;
+    transition: width 0.3s ease;
+}
+.navbar input[type="text"]:focus {
+    width: 220px;
+}
+
+.main {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 25px;
+    padding: 25px 40px;
+    background-color: #f3f7f9;
+    border-radius: 10px;
+}
+
+/*Sidebar*/
+.sidebar {
+    background: white;
+    padding: 25px 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    font-weight: 600;
+}
+.sidebar h3 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #007acc;
+    font-size: 20px;
+}
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+.sidebar ul li {
+    margin-bottom: 16px;
+    font-size: 17px;
+}
+.sidebar ul li a {
+    color: black;
+    text-decoration: none;
+    padding: 4px 8px;
+    border-radius: 6px;
+    display: block;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-weight: 500;
+}
+.sidebar ul li a:hover {
+    background-color: #00caff;
+    color: white;
+    text-decoration: none;
+}
+/*Content-----------------------------------------------*/
+.content {
+    background: white;
+    padding: 20px 20px 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.07);
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 25px;
+    align-items:start;
+}
+
+/*Product-----------------------------------------------*/
+.product {
+    background: #fff;
+    border-radius: 15px;
+    padding: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+.product:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 22px rgba(0,0,0,0.15);
+}
+.product img {
+    width: 140px;
+    height: 140px;
+    object-fit: contain;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+}
+.product:hover img {
+    transform: scale(1.05);
+}
+.product-name {
+    font-weight: 700;
+    font-size: 15px;
+    margin-bottom: 6px;
+    color: #111;
+    min-height: 48px;
+    word-wrap: break-word;
+}
+.product-price {
+    color: #28a745;
+    font-weight: bold;
+    font-size: 17px;
+    margin-bottom: 12px;
+}
+.buy-btn {
+    background: #007acc;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 14px;
+}
+.buy-btn:hover {
+    background-color: #007acc;
+}
+
+/*Footer---------------------------------------------------*/
+.footer {
+    background-color: #111;
+    color: #bbb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.4);
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">LaJersey Shop</div>
+
+        <div class="navbar">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+            <input type="text" id="searchInput" placeholder="Cari produk..." />
+        </div>
+
+        <div class="main">
+            <aside class="sidebar">
+                <h3>Kategori</h3>
+                <ul>
+                    <li><a href="#">Man</a></li>
+                    <li><a href="#">Woman</a></li>
+                    <li><a href="#">Kids</a></li>
+                </ul>
+            </aside>
+
+            <main class="content" id="productList">
+                <div class="product">
+                    <img src="mens-fanatics-stephen-curry-royal-golden-state-warriors-fast-break-replica-jersey-icon-edition_ss5_p-201292067+u-gpl6iqf36v3yivrfgd96+v-xlkvrfo9dibyrqsz4afc.avif" alt="Jersey CHEF" />
+                    <div class="product-price">Rp 350.000</div>
+                    <div class="product-name">Men Golden State Warriors Stephen Curry</div>
+                    <button class="buy-btn">Beli</button>
+                </div>
+                <div class="product">
+                    <img src="mens-fanatics-lebron-james-gold-los-angeles-lakers-fast-break-replica-jersey-icon-edition_ss5_p-201451085+u-jgui2u1zrf8sskilncqf+v-71bpudeo4f1xayc0mwzd.avif" alt="Jersey KING" />
+                    <div class="product-price">Rp 370.000</div>
+                    <div class="product-name">Men's Los Angeles Lakers LeBron James</div>
+                    <button class="buy-btn">Beli</button>
+                </div>
+                <div class="product">
+                    <img src="mens-fanatics-shai-gilgeous-alexander-blue-oklahoma-city-thunder-fast-break-replica-player-jersey-icon-edition_ss5_p-201451103+u-aodpiouxkppoyrdgdn4j+v-ff9xidii5n2ddgvwgzdd.jpg" alt="Jersey SGA" />
+                    <div class="product-price">Rp 530.000</div>
+                    <div class="product-name">Men Oklahoma City Shai Gilgeous-Alexander</div>
+                    <button class="buy-btn">Beli</button>
+                </div>
+                <div class="product">
+                    <img src="mens-fanatics-tyrese-haliburton-gold-indiana-pacers-fast-break-replica-jersey-statement-edition_ss5_p-201058677+u-vy3yhl0trs837b6z34cx+v-w9r4705jbgpuhdmnsv9a.avif" alt="Jersey HELI" />
+                    <div class="product-price">Rp 400.000</div>
+                    <div class="product-name">Men Indiana Pacers Tyrese Haliburton</div>
+                    <button class="buy-btn">Beli</button>
+                </div>
+            </main>
+        </div>
+
+        <div class="footer">
+             &copy; 2025 Muhammad Najwan Wibisana
+        </div>
+    </div>
+
+    <script>
+        const searchInput = document.getElementById('searchInput');
+        const productList = document.getElementById('productList');
+        const products = productList.getElementsByClassName('product');
+
+        searchInput.addEventListener('input', function() {
+            const filter = searchInput.value.toLowerCase();
+            for (let i = 0; i < products.length; i++) {
+                const productName = products[i].getElementsByClassName('product-name')[0];
+                const textValue = productName.textContent || productName.innerText;
+                if (textValue.toLowerCase().indexOf(filter) > -1) {
+                    products[i].style.display = "";
+                } else {
+                    products[i].style.display = "none";
+                }
+            }
+        });
+    
+    </script>
+</body>
+</html>
